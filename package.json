@@ -1,0 +1,25 @@
+{
+  "name": "basic-typescript-mcp-server-boilerplate",
+  "version": "1.0.0",
+  "description": "A Basic TypeScript MCP Server Boilerplate",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bunx --bun @modelcontextprotocol/inspector bun ./src/index.ts",
+    "start": "bun run src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./dist --target node",
+    "serve": "bun build ./src/index.ts --outdir ./dist --target node && bun ./dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.2",
+    "n8n-nodes-base": "^1.14.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
